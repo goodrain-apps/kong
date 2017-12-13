@@ -18,8 +18,6 @@ RUN chmod +x /docker-entrypoint.sh
 
 EXPOSE 8000 8443 8001 8444
 
-STOPSIGNAL SIGTERM
-
 ENTRYPOINT [ "/docker-entrypoint.sh" ]
 
 CMD ["/usr/local/openresty/nginx/sbin/nginx", "-c", "/usr/local/kong/nginx.conf", "-p", "/usr/local/kong/"]
